@@ -3,17 +3,19 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
+    "dev": "concurrently --kill-others \"bun run tailwindcss --watch\" \"vite\"",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "watch:css": "tailwindcss -i ./src/global.css -o ./dist/index.css --watch",
-    "build": "tsc && vite build && bun build:css",
-    "preview": "vite preview"
+    "tailwindcss": "tailwindcss -i ./src/global.css -o ./dist/index.css",
+    "build": "tsc && vite build && bun run tailwindcss",
+    "preview": "vite preview",
+    "dev:node": "concurrently \"tailwindcss -i ./src/global.css -o ./dist/index.css --watch\" \"vite\"",
+    "build:node": "tsc && vite build && npm run tailwindcss"
   },
   "dependencies": {
     "autoprefixer": "^10.4.16",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
-    "lucide-react": "^0.284.0",
+    "concurrently": "^8.2.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.16.0",
