@@ -54,7 +54,7 @@
 * [Tailwindcss](https://tailwindcss.com/)
 * [Vite](https://vitejs.dev)
 * [shadcn/ui](https://ui.shadcn.com/)
-* [bun](https://bun.sh/)
+* [bun](https://bun.sh/) (But you can use [Node.js](https://nodejs.org/en) instead)
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -69,6 +69,9 @@ You need to install bun
   ```
   _Supported on macOS, Linux, and WSL_
 
+#### If you're using Node instead Bun, please make sure that you Node version is 18 or higher. 
+_(Recommended if you're using Windows without WSL)_
+
 ### Installation
 
 1. Clone the repo
@@ -79,11 +82,20 @@ You need to install bun
    ```sh
    bun install
    ```
-3. With packages installed, run development command:
+   or
+   
+   ```sh
+   npm i
+   ```
+4. With packages installed, run development command:
   ```sh
   bun run dev
   ```
-
+  or
+  
+  ```sh
+  npm run dev:node
+  ```
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
