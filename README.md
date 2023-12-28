@@ -87,16 +87,15 @@ _(Recommended if you're using Windows without WSL)_
    ```sh
    npm i
    ```
-4. With packages installed, run development command:
-  ```sh
-  bun run dev
-  ```
-  or
-  
-  ```sh
-  npm run dev:node
-  ```
-
+3. With packages installed, run development command:
+    ```sh
+    bun run dev
+    ```
+    or
+    
+    ```sh
+    npm run dev:node
+    ```
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/Kanastra-Tech/frontend-challenge-boilerplate.svg?style=for-the-badge
